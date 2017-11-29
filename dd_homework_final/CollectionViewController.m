@@ -17,11 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self takeJson:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=2bd626269ec6df46745b6f9e7ef1b7d1&tags=" secondParam:self.stringFromTableView thirdParam:@"&per_page=15&page=15&format=json&nojsoncallback=1" fouthParam:@"photos" fifthParam:@"photo" sixthParam:@"id"];
+    [self takeJson:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=fb1a10aa4d898f985f525c7f5a29ce8b&tags=" secondParam:self.stringFromTableView thirdParam:@"&per_page=15&page=15&format=json&nojsoncallback=1" fouthParam:@"photos" fifthParam:@"photo" sixthParam:@"id"];
     
     NSLog(@"%@", self.stringFromTableView);
     
-    [self takeJson:@"https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=2bd626269ec6df46745b6f9e7ef1b7d1&photo_id=" secondParam:@"somestring" thirdParam:@"&format=json&nojsoncallback=1" fouthParam:@"sizes" fifthParam:@"size" sixthParam:@"source"];
+    [self takeJson:@"https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=fb1a10aa4d898f985f525c7f5a29ce8b&photo_id=" secondParam:@"somestring" thirdParam:@"&format=json&nojsoncallback=1" fouthParam:@"sizes" fifthParam:@"size" sixthParam:@"source"];
 //    NSMutableString* path = [[NSMutableString alloc] initWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=15d0e5a14c22ab06ab29dd73b3610df3&tags=whitenight&per_page=10&page=1&format=json&nojsoncallback=1"];
 //    NSURL *url = [NSURL URLWithString:path];
 //    NSError *error;

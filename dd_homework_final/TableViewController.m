@@ -26,7 +26,7 @@
 //}
 
 -(void)JsonToArray{
-    id path = @"https://api.flickr.com/services/rest/?method=flickr.tags.getHotList&api_key=e6c2b1a8b4fa09c3749d17ba47fd9813&period=week&count=15&format=json&nojsoncallback=1";
+    id path = @"https://api.flickr.com/services/rest/?method=flickr.tags.getHotList&api_key=2bd626269ec6df46745b6f9e7ef1b7d1&period=week&count=15&format=json&nojsoncallback=1";
     NSURL *url = [NSURL URLWithString:path];
     NSData *data = [NSData dataWithContentsOfURL:url];
     NSError *error;

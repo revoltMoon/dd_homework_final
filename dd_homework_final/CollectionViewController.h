@@ -9,10 +9,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
-@interface CollectionViewController : UICollectionViewController
+#import "flickrNetwork.h"
+@interface CollectionViewController : UICollectionViewController<PhotoDelegate>
 @property (strong, nonatomic) NSMutableArray *arrayForPhotoId;
 @property (strong, nonatomic) NSMutableArray *arrayWithPhotoURL;
 @property (strong, nonatomic) NSMutableArray *arrayWithPhotoURLWithBestQuality;
+@property (strong, nonatomic) NSMutableArray *img;
 @property (nonatomic, copy) NSString *stringFromTableView;
--(void)takeJson:(NSString*)startOfString secondParam: (NSString*)secondParam thirdParam: (NSString*)thirdParam fouthParam: (NSString*)fouthParam fifthParam: (NSString*)fifthParam sixthParam: (NSString*)sixthParam;
 @end

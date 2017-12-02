@@ -8,46 +8,19 @@
 
 #import "TableViewController.h"
 @interface TableViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
-//key fb1a10aa4d898f985f525c7f5a29ce8b
-//secret ab3671331496f389
 @implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.JsonToArray;
+    flickrNetwork* flickr = [[flickrNetwork alloc]init];
+    [flickr tags:self];
 }
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//     if([segue.identifier isEqualToString:@"Cell"]){
-//         CollectionViewController *cvc = (CollectionViewController*)segue.destinationViewController;
-//    self.stringToGiveToCVC = @"ferrari";
-//    cvc.stringFromTableView = self.stringToGiveToCVC;
-//     }
-//}
-
--(void)JsonToArray{
-    id path = @"https://api.flickr.com/services/rest/?method=flickr.tags.getHotList&api_key=fb1a10aa4d898f985f525c7f5a29ce8b&period=week&count=15&format=json&nojsoncallback=1";
-    NSURL *url = [NSURL URLWithString:path];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    NSError *error;
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    if (error){
-        NSLog(@"%@",error.localizedDescription);
-    } else {
-        NSArray* array = [[NSArray alloc]init];
-        array = [[json valueForKey:@"hottags"] valueForKey:@"tag"];
-        self.arrayForTags = [[NSMutableArray alloc]init];
-        for (int i=0; i<array.count; ++i) {
-            NSDictionary* dictio = [array objectAtIndex:i];
-            [self.arrayForTags addObject:[dictio objectForKey:@"_content"]];
-        }
-    }
+-(void)getTags:(NSMutableArray*)arrForTags{
+    self.arrayForTags = arrForTags;
+    [self.tableView reloadData];
 }
-
-//- (void)pushViewController:(UIViewController *)viewController
-//                  animated:(BOOL)animated{
-//
-//}
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {

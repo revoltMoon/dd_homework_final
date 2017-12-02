@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A181CF31FCD9F80000172BA /* CollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A181CF21FCD9F80000172BA /* CollectionView.xib */; };
 		5A1C25B81FCC4B9F00A4364E /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C25B71FCC4B9F00A4364E /* CollectionViewCell.m */; };
 		5A1C25BB1FCC668800A4364E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C25BA1FCC668800A4364E /* ViewController.m */; };
+		5A61AD051FD1E20800B3E24C /* flickrNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A61AD041FD1E20800B3E24C /* flickrNetwork.m */; };
 		5A7A3A721FC6AE8800D91B44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A3A711FC6AE8800D91B44 /* AppDelegate.m */; };
 		5A7A3A751FC6AE8800D91B44 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A3A741FC6AE8800D91B44 /* TableViewController.m */; };
 		5A7A3A781FC6AE8800D91B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7A3A761FC6AE8800D91B44 /* Main.storyboard */; };
@@ -20,11 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5A181CF21FCD9F80000172BA /* CollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionView.xib; sourceTree = "<group>"; };
 		5A1C25B61FCC4B9F00A4364E /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		5A1C25B71FCC4B9F00A4364E /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		5A1C25B91FCC668800A4364E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5A1C25BA1FCC668800A4364E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5A61AD031FD1E20800B3E24C /* flickrNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flickrNetwork.h; sourceTree = "<group>"; };
+		5A61AD041FD1E20800B3E24C /* flickrNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = flickrNetwork.m; sourceTree = "<group>"; };
 		5A7A3A6D1FC6AE8800D91B44 /* dd_homework_final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dd_homework_final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7A3A701FC6AE8800D91B44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A7A3A711FC6AE8800D91B44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,12 +80,13 @@
 				5A1C25B71FCC4B9F00A4364E /* CollectionViewCell.m */,
 				5A1C25B91FCC668800A4364E /* ViewController.h */,
 				5A1C25BA1FCC668800A4364E /* ViewController.m */,
+				5A61AD031FD1E20800B3E24C /* flickrNetwork.h */,
+				5A61AD041FD1E20800B3E24C /* flickrNetwork.m */,
 				5A7A3A761FC6AE8800D91B44 /* Main.storyboard */,
 				5A7A3A791FC6AE8800D91B44 /* Assets.xcassets */,
 				5A7A3A7B1FC6AE8800D91B44 /* LaunchScreen.storyboard */,
 				5A7A3A7E1FC6AE8800D91B44 /* Info.plist */,
 				5A7A3A7F1FC6AE8800D91B44 /* main.m */,
-				5A181CF21FCD9F80000172BA /* CollectionView.xib */,
 			);
 			path = dd_homework_final;
 			sourceTree = "<group>";
@@ -153,7 +155,6 @@
 			files = (
 				5A7A3A7D1FC6AE8800D91B44 /* LaunchScreen.storyboard in Resources */,
 				5A7A3A7A1FC6AE8800D91B44 /* Assets.xcassets in Resources */,
-				5A181CF31FCD9F80000172BA /* CollectionView.xib in Resources */,
 				5A7A3A781FC6AE8800D91B44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A61AD051FD1E20800B3E24C /* flickrNetwork.m in Sources */,
 				5A1C25BB1FCC668800A4364E /* ViewController.m in Sources */,
 				5A7A3A8A1FC6E87C00D91B44 /* CollectionViewController.m in Sources */,
 				5A1C25B81FCC4B9F00A4364E /* CollectionViewCell.m in Sources */,

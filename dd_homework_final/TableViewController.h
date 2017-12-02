@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CollectionViewController.h"
-@interface TableViewController : UITableViewController
+#import "flickrNetwork.h"
+@interface TableViewController : UITableViewController<TagsDelegate>
 @property (strong, nonatomic) NSMutableArray *arrayForTags;
 @property (nonatomic, copy) NSString *stringToGiveToCVC;
--(void)JsonToArray;
 @end
 

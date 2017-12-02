@@ -34,6 +34,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="kRb-Ix-08P"/>
+                    <connections>
+                        <outlet property="tableView" destination="6fX-eE-u7n" id="bXH-ZY-xKu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jW-hf-lft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,6 +86,9 @@
                             <outlet property="delegate" destination="hxh-8j-wE1" id="8By-nV-qan"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="CollectionView" destination="rSE-1J-kRa" id="4qM-tD-98o"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0b-Ir-hzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

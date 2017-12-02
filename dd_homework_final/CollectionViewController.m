@@ -48,6 +48,7 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     ViewController *viewContr = [self.storyboard instantiateViewControllerWithIdentifier:@"View"];
     viewContr.stringFromCollectionView = self.arrayWithPhotoURLWithBestQuality[indexPath.row];
+    viewContr.img = self.img[indexPath.row];
     [self.navigationController pushViewController:viewContr animated:YES];
 }
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

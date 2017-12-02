@@ -87,7 +87,7 @@
                                                              [arrayForPhotoSource addObject:[dictio objectForKey:@"source"]];
                                                          }
                                                               dispatch_async(dispatch_get_main_queue(), ^{
-                                                                  [delegate getPhotoURL:arrayForPhotoSource[1] stringWithPhotoURLWithBestQuality:arrayForPhotoSource[arrayForPhotoSource.count-3]];
+                                                                  [delegate getPhotoURL:arrayForPhotoSource[arrayForPhotoSource.count-3] stringWithPhotoURLWithBestQuality:arrayForPhotoSource[arrayForPhotoSource.count-3]];
 //                                                                  NSLog(@"%@", arrayForPhotoSource);
                                                               });
                                                          

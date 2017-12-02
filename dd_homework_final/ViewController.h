@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "flickrNetwork.h"
-@interface ViewController : UIViewController<PhotoDelegate>
+@interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageFromCVC;
 @property (nonatomic, copy) NSString *stringFromCollectionView;
 @property (strong, nonatomic) UIImage *img;

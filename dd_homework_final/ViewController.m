@@ -13,11 +13,6 @@
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    flickrNetwork* flickr = [[flickrNetwork alloc]init];
-    [flickr photo:self strWithURL:self.stringFromCollectionView];
-}
--(void)getPhoto:(UIImage *)image{
-    self.img = image;
     self.imageFromCVC.image = self.img;
     [self.view addSubview:self.imageFromCVC];
     [self.view bringSubviewToFront:self.imageFromCVC];

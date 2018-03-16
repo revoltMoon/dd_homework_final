@@ -17,7 +17,7 @@
 -(void)getPhoto:(UIImage*)image;
 @end
 
-@interface flickrNetwork : NSObject
+@interface flickrNetwork : NSObject 
 -(void)tags:(id <TagsDelegate>) delegate;
 -(void)photoId:(id <PhotoDelegate>) delegate hashtag:(NSString*)hashtag;
 -(void)photoURL:(id <PhotoDelegate>) delegate numberOfPhoto:(NSString*)numberOfPhoto;

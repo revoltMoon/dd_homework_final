@@ -15,7 +15,7 @@
 @end
 @implementation CollectionViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad { 
     [super viewDidLoad];
     flickr = [[flickrNetwork alloc]init];
     [flickr photoId:self hashtag:self.stringFromTableView];

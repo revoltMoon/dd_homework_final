@@ -37,10 +37,10 @@
 }
 
 
--(void)photoId:(id <PhotoDelegate>) delegate startOfString:(NSString*)startOfString secondParam: (NSString*)secondParam thirdParam: (NSString*)thirdParam fouthParam: (NSString*)fouthParam fifthParam: (NSString*)fifthParam sixthParam: (NSString*)sixthParam{
-    NSMutableString* path = [[NSMutableString alloc] initWithString:startOfString];
-    [path insertString:secondParam atIndex:path.length];
-    [path insertString:thirdParam atIndex:path.length];
+-(void)photoId:(id <PhotoDelegate>) delegate hashtag:(NSString*)hashtag{
+    NSMutableString* path = [[NSMutableString alloc] initWithString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=fb1a10aa4d898f985f525c7f5a29ce8b&tags="];
+    [path insertString:hashtag atIndex:path.length];
+    [path insertString:@"&per_page=15&page=15&format=json&nojsoncallback=1" atIndex:path.length];
     NSURL *url = [NSURL URLWithString:path];
     NSURLSession * session = [NSURLSession sharedSession];
     NSURLSessionDownloadTask * task = [session downloadTaskWithURL:url
@@ -48,22 +48,21 @@
                                                      if (!error) {
                                                          NSData *data = [NSData dataWithContentsOfURL:url];
                                                          NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                                                         if ([sixthParam isEqualToString:@"id"])
-                                                         {
+                                                         
                                                              NSArray* arrayForPhotosId = [[NSArray alloc]init];
-                                                             arrayForPhotosId = [[json valueForKey:fouthParam] valueForKey:fifthParam];
+                                                             arrayForPhotosId = [[json valueForKey:@"photos"] valueForKey:@"photo"];
                                                              NSMutableArray *arrayForPhotoId = [[NSMutableArray alloc]init];
                                                              [arrayForPhotoId removeAllObjects];
                                                              for (int i=0; i<arrayForPhotosId.count; ++i) {
                                                                  NSDictionary* dictio = [arrayForPhotosId objectAtIndex:i];
-                                                                 [arrayForPhotoId addObject:[dictio objectForKey:sixthParam]];
+                                                                 [arrayForPhotoId addObject:[dictio objectForKey:@"id"]];
                                                              }
                                                          dispatch_async(dispatch_get_main_queue(), ^{
                                                              [delegate getPhotoId:arrayForPhotoId];
 //                                                             NSLog(@"%@", arrayForPhotoId);
                                                          });
                                                          
-                                                         }
+                                                         
                                                      }
                                                  }];
     [task resume];

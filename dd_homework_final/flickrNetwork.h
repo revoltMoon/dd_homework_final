@@ -19,7 +19,7 @@
 
 @interface flickrNetwork : NSObject
 -(void)tags:(id <TagsDelegate>) delegate;
--(void)photoId:(id <PhotoDelegate>) delegate startOfString:(NSString*)startOfString secondParam: (NSString*)secondParam thirdParam: (NSString*)thirdParam fouthParam: (NSString*)fouthParam fifthParam: (NSString*)fifthParam sixthParam: (NSString*)sixthParam;
+-(void)photoId:(id <PhotoDelegate>) delegate hashtag:(NSString*)hashtag;
 -(void)photoURL:(id <PhotoDelegate>) delegate numberOfPhoto:(NSString*)numberOfPhoto;
 -(void)photo:(id <PhotoDelegate>)delegate strWithURL:(NSString*)strWithURL;
 @end

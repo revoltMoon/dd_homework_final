@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     flickr = [[flickrNetwork alloc]init];
-    [flickr photoId:self startOfString:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=fb1a10aa4d898f985f525c7f5a29ce8b&tags=" secondParam:self.stringFromTableView thirdParam:@"&per_page=15&page=15&format=json&nojsoncallback=1" fouthParam:@"photos" fifthParam:@"photo" sixthParam:@"id"];
+    [flickr photoId:self hashtag:self.stringFromTableView];
     self.arrayWithPhotoURL = [[NSMutableArray alloc]init];
     self.arrayWithPhotoURLWithBestQuality = [[NSMutableArray alloc]init];
     self.img = [[NSMutableArray alloc]init];
